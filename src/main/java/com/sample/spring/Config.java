@@ -1,30 +1,12 @@
 package com.sample.spring;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-
-import com.sample.spring.repository.SampleRepository;
-import com.sample.spring.repository.SampleRepositoryImpl1;
-import com.sample.spring.repository.SampleRepositoryImpl2;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@ComponentScan
+@PropertySource("classpath:application.properties")
 public class Config {
-
-    @Bean
-    public Application application() {
-        return new Application(primaryRepository());
-    }
-
-    @Bean
-    public SampleRepository secondaryRepository() {
-        return new SampleRepositoryImpl1();
-    }
-
-    @Bean
-    @Primary
-    public SampleRepository primaryRepository() {
-        return new SampleRepositoryImpl2();
-    }
-
+    
 }

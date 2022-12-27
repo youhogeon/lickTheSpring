@@ -1,47 +1,26 @@
 package com.sample.spring;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.sample.spring.repository.SampleRepository;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 
-public class Application implements InitializingBean, DisposableBean {
+@Component
+public class Application {
 
     private final SampleRepository sampleRepository;
+
+    @Value("${group.key}") //SpEL 이용해 application.properties의 값을 가져옴
+    private String test;
 
     public Application(SampleRepository sampleRepository) {
         this.sampleRepository = sampleRepository;
     }
 
-    public SampleRepository getSampleRepository() {
-        return sampleRepository;
-    }
-
     public void run() {
+        System.out.println(test);
         System.out.println(sampleRepository.getLastUserId());
-    }
-
-    @PostConstruct
-    public void postConstruct() {
-        System.out.println("@PostConstruct");
-    }
-
-    @PreDestroy
-    public void preDestroy() {
-        System.out.println("@PreDestroy");
-    }
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        System.out.println("afterPropertiesSet");
-    }
-
-    @Override
-    public void destroy() throws Exception {
-        System.out.println("destroy");
     }
 
 }
