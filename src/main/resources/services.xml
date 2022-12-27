@@ -5,7 +5,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="application" class="com.sample.spring.Application">
-        <property name="sampleRepository" ref="primaryRepository" />
+        <constructor-arg ref="primaryRepository" />
     </bean>
 
     <bean id="secondaryRepository" class="com.sample.spring.repository.SampleRepositoryImpl1" />
