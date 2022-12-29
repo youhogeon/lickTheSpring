@@ -52,6 +52,13 @@
 				<version>3.3.2</version>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+          <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+          <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+          <webResources>
+            <webResource>
+              <directory>${basedir}/src/main/webapp</directory>
+            </webResource>
+          </webResources>
         </configuration>
 			</plugin>
 		</plugins>
