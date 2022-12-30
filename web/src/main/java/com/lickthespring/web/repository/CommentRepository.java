@@ -3,18 +3,14 @@ package com.lickthespring.web.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.lickthespring.web.entity.Comment;
 
+@Repository
 public class CommentRepository {
     
-    private final static CommentRepository instance = new CommentRepository();
     private final static List<Comment> comments = new ArrayList<>();
-
-    private CommentRepository() { }
-
-    public static CommentRepository getInstance() {
-        return instance;
-    }
 
     public Comment findById(int id) {
         try {

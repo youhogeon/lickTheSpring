@@ -2,18 +2,18 @@ package com.lickthespring.web.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.lickthespring.web.entity.Comment;
 import com.lickthespring.web.repository.CommentRepository;
 
+@Service
 public class CommentService {
     
-    private final static CommentService instance = new CommentService();
-    private final CommentRepository commentRepository = CommentRepository.getInstance();
+    private final CommentRepository commentRepository;
 
-    private CommentService() { }
-
-    public static CommentService getInstance() {
-        return instance;
+    public CommentService(CommentRepository commentRepository) {
+        this.commentRepository = commentRepository;
     }
 
     public Comment findById(int id) {
