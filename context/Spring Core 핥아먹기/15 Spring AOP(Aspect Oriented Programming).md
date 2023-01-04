@@ -6,7 +6,7 @@
 
 코드에 불필요한 중복을 줄이고 비즈니스 로직에만 집중할 수 있다.
 
-![Untitled](15 Spring AOP(Aspect Oriented Programming)/Untitled.png)
+![Untitled](15 Spring AOP(Aspect%20Oriented%20Programming)/Untitled.png)
 
 Spring에서는 AOP를 지원하기 위해 JDK 동적 프록시(java.lang.reflect.proxy)를 이용해 프록시 객체를 만든다.
 
