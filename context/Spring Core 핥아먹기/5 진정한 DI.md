@@ -16,8 +16,8 @@
 ```java
 package com.sample.spring;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+t.ApplicationContext;
+t.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
@@ -33,13 +33,13 @@ public class Main {
 ```java
 package com.sample.spring;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+t.annotation.Bean;
+t.annotation.Configuration;
+t.annotation.Primary;
 
-import com.sample.spring.repository.SampleRepository;
-import com.sample.spring.repository.SampleRepositoryImpl1;
-import com.sample.spring.repository.SampleRepositoryImpl2;
+ry.SampleRepository;
+ry.SampleRepositoryImpl1;
+ry.SampleRepositoryImpl2;
 
 @Configuration
 public class Config {
@@ -66,7 +66,7 @@ public class Config {
 ```java
 package com.sample.spring;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 public class Application {
 
@@ -87,7 +87,7 @@ public class Application {
 ```java
 package com.sample.spring;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 public class Application {
 
@@ -144,7 +144,7 @@ XML의 경우 constructor-arg 태그를 통해 생성자에 의존관계를 지�
 ```java
 package com.sample.spring;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 public class Application {
 
@@ -204,4 +204,4 @@ Spring 공식 문서에서도 생성자 주입을 권장한다.
 
 # 코드
 
-[https://github.com/youhogeon/lickTheSpring/tree/456e40e5fbf1648027d51831e00e5f0d1ecd0b00](https://github.com/youhogeon/lickTheSpring/tree/456e40e5fbf1648027d51831e00e5f0d1ecd0b00)
+[https://github.com/youhogeon/lickTheSpring/tree/ecd0b00](https://github.com/youhogeon/lickTheSpring/tree/ecd0b00)

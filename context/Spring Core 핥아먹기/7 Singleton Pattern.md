@@ -37,10 +37,10 @@ Spring context는 기본적으로 모든 Bean이 Singleton임을 보장해준다
 ```java
 package com.sample.spring;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+t.ApplicationContext;
+t.annotation.AnnotationConfigApplicationContext;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 public class Main {
 
@@ -63,7 +63,7 @@ public class Main {
 따라서 아래와 같이 Singleton 객체 내에 공유해서는 안되는 필드가 존재하지 않도록 주의해야 한다.
 
 ```java
-package com.sample.spring.repository;
+ory;
 
 public class Sample {
 
@@ -139,8 +139,8 @@ public SampleRepository getSampleRepository() {
 ```java
 package com.sample.spring;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+t.ApplicationContext;
+t.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
@@ -171,7 +171,7 @@ Spring은 설정 파일을 Bean으로 등록할 때, 설정파일 자체를 등�
 
 Spring은 설정 파일의 바이트코드를 조작해, 반드시 객체 생성은 한번만 이루어짐을 강제로 보장한다.
 
-![Untitled](7%20Singleton%20Pattern%200722b83e17684b258b245e1840559894/Untitled.png)
+![Untitled](7 Singleton P559894/Untitled.png)
 
 Spring은 @Configuration 이 붙어있는 객체를 설정파일로 간주하고 CGLIB를 이용해 프록시 객체를 생성후 원래 객체 대신 Bean으로 등록한다.
 
@@ -202,7 +202,7 @@ public SampleRepository primaryRepository() {
 }
 ```
 
-Bean 정의 시 위와 같이 Scope(org.springframework.context.annotation.Scope)를 지정해주면 singleton이 아닌 다른 scope의 빈을 만들 수 있다.
+Bean 정의 시 위와 같이 Scope(ation.Scope)를 지정해주면 singleton이 아닌 다른 scope의 빈을 만들 수 있다.
 
 ```java
 context.getBean(Application.class).getSampleRepository() == context.getBean("primaryRepository") //false

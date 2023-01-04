@@ -13,8 +13,8 @@ Spring context에서는 빈을 자동으로 찾아 등록(주입이 아니다)�
 ```java
 package com.sample.spring;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+t.annotation.ComponentScan;
+t.annotation.Configuration;
 
 @Configuration
 @ComponentScan
@@ -36,10 +36,10 @@ Spring 컨테이너가 만들어지면 인자로 받은 설정 클래스 객체�
 ```java
 package com.sample.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+factory.annotation.Autowired;
+type.Component;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 @Component
 public class Application {
@@ -55,9 +55,9 @@ public class Application {
 ```
 
 ```java
-package com.sample.spring.repository;
+ory;
 
-import org.springframework.stereotype.Component;
+type.Component;
 
 @Component
 public class SampleRepositoryImpl1 implements SampleRepository {
@@ -70,10 +70,10 @@ public class SampleRepositoryImpl1 implements SampleRepository {
 ```
 
 ```java
-package com.sample.spring.repository;
+ory;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+t.annotation.Primary;
+type.Component;
 
 @Component
 @Primary
@@ -132,9 +132,9 @@ public @interface Controller {
 우리의 (아무런 기능도 없는) 두 Repository도 @Repository 어노테이션으로 변경하자.
 
 ```java
-package com.sample.spring.repository;
+ory;
 
-import org.springframework.stereotype.Repository;
+type.Repository;
 
 @Repository
 public class SampleRepositoryImpl1 implements SampleRepository {
@@ -147,10 +147,10 @@ public class SampleRepositoryImpl1 implements SampleRepository {
 ```
 
 ```java
-package com.sample.spring.repository;
+ory;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Repository;
+t.annotation.Primary;
+type.Repository;
 
 @Repository
 @Primary
@@ -192,10 +192,10 @@ public class AppConfig {
 ```java
 package com.sample.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+factory.annotation.Autowired;
+type.Component;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 @Component
 public class Application {
@@ -219,9 +219,9 @@ public class Application {
 ```java
 package com.sample.spring;
 
-import org.springframework.stereotype.Component;
+type.Component;
 
-import com.sample.spring.repository.SampleRepository;
+ry.SampleRepository;
 
 @Component
 public class Application {

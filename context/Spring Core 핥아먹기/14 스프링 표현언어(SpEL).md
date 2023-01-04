@@ -4,7 +4,7 @@
 
 SpEL(Spring Expression Language)이란 런타임에서 객체에 대한 쿼리와 조작을 지원하는 강력한 표현 언어이다.
 
-> The Spring Expression Language (SpEL) is a powerful expression language that supports querying and manipulating an object graph at runtime.
+> The Spring Expression Language (SpEL) is ting an object graph at runtime.
 > 
 
 # 사용 예시
@@ -73,7 +73,7 @@ ExpressionParser parser = new SpelExpressionParser();
 // evals to "Hello World"
 String helloWorld = (String) parser.parseExpression("'Hello World'").getValue();
 
-double avogadrosNumber = (Double) parser.parseExpression("6.0221415E+23").getValue();
+double avogadrosNumber = (Double) parser.parseExpression("6.0221415E 23").getValue();
 
 // evals to 2147483647
 int maxValue = (Integer) parser.parseExpression("0x7FFFFFFF").getValue();
@@ -89,7 +89,7 @@ Object nullValue = parser.parseExpression("null").getValue();
 Entity entity = new Entity();
 ExpressionParser parser = new SpelExpressionParser();
 
-int year = (Integer) parser.parseExpression("currentTime.year + 1900").getValue(entity);
+int year = (Integer) parser.parseExpression("currentTime.year   1900").getValue(entity);
 String secondHobby = (String) parser.parseExpression("hobbies[1]").getValue(entity);
 String firstAlias = (String) parser.parseExpression("alias[0]").getValue(entity);
 String height = (String) parser.parseExpression("info[height]").getValue(entity);
@@ -132,12 +132,12 @@ boolean trueValue = parser.parseExpression(
 
 ```java
 Inventor einstein = p.parseExpression(
-        "new org.spring.samples.spel.inventor.Inventor('Albert Einstein', 'German')")
+        "tor.Inventor('Albert Einstein', 'German')")
         .getValue(Inventor.class);
 
 // create new Inventor instance within the add() method of List
 p.parseExpression(
-        "Members.add(new org.spring.samples.spel.inventor.Inventor(
+        "Members.add(tor.Inventor(
             'Albert Einstein', 'German'))").getValue(societyContext);
 ```
 
@@ -166,7 +166,7 @@ public abstract class StringUtils {
 
     public static String reverseString(String input) {
         StringBuilder backwards = new StringBuilder(input.length());
-        for (int i = 0; i < input.length(); i++) {
+        for (int i = 0; i < input.length(); i  ) {
             backwards.append(input.charAt(input.length() - 1 - i));
         }
         return backwards.toString();

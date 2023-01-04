@@ -9,9 +9,9 @@ Spring 3.2 버전부터 Java의 Annotation 문법을 사용해 빈 설정이 가
 ```java
 package com.sample.spring;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-//import org.springframework.context.support.ClassPathXmlApplicationContext;
+t.ApplicationContext;
+t.annotation.AnnotationConfigApplicationContext;
+//t.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
@@ -28,11 +28,11 @@ public class Main {
 ```java
 package com.sample.spring;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+t.annotation.Bean;
+t.annotation.Configuration;
 
-import com.sample.spring.repository.SampleRepository;
-import com.sample.spring.repository.SampleRepositoryImpl1;
+ry.SampleRepository;
+ry.SampleRepositoryImpl1;
 
 @Configuration
 public class Config {
@@ -54,12 +54,12 @@ ApplicationContext 를 구현한 구현체는 *ClassPathXmlApplicationContext나
 ```java
 package com.sample.spring;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+t.annotation.Bean;
+t.annotation.Configuration;
 
-import com.sample.spring.repository.SampleRepository;
-import com.sample.spring.repository.SampleRepositoryImpl1;
-import com.sample.spring.repository.SampleRepositoryImpl2;
+ry.SampleRepository;
+ry.SampleRepositoryImpl1;
+ry.SampleRepositoryImpl2;
 
 @Configuration
 public class Config {
@@ -88,7 +88,7 @@ context.getBean(SampleRepository.class)
 따라서 아래와 같이 NoUniqueBeanDefinitionException(RuntimeException)을 발생시킨다.
 
 ```java
-Exception in thread "main" org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.sample.spring.repository.SampleRepository' available: expected single matching bean but found 2: sampleRepository,sampleRepository2
+Exception in thread "main"y.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.sample.spring.repository.SampleRepository' available:t found 2: sampleRepository,sampleRepository2
 ```
 
 이런 경우 특정 타입으로 Bean을 요청하는 것이 아니라, Bean 이름을 통해 Bean을 받아올 수 있다.
