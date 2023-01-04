@@ -204,4 +204,4 @@ Spring 공식 문서에서도 생성자 주입을 권장한다.
 
 # 코드
 
-[https://github.com/youhogeon/lickTheSpring/tree/456e40e5fbf1648027d51831e00e5f0d1ecd0b00](https://github.com/youhogeon/lickTheSpring/tree/456e40e5fbf1648027d51831e00e5f0d1ecd0b00)
+[https%3A%2F%2Fgithub.com%2Fyouhogeon%2FlickTheSpring%2Ftree%2F456e40e5fbf1648027d51831e00e5f0d1ecd0b00](https://github.com/youhogeon/lickTheSpring/tree/456e40e5fbf1648027d51831e00e5f0d1ecd0b00)

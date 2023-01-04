@@ -6,7 +6,7 @@
 
 코드에 불필요한 중복을 줄이고 비즈니스 로직에만 집중할 수 있다.
 
-![Untitled](15 Spring AOP(Aspect%20Oriented%20Programming)/Untitled.png)
+![Untitled](15%20Spring%20AOP(Aspect%20Oriented%20Programming)%2FUntitled.png)
 
 Spring에서는 AOP를 지원하기 위해 JDK 동적 프록시(java.lang.reflect.proxy)를 이용해 프록시 객체를 만든다.
 
@@ -52,7 +52,7 @@ JDK 동적 프록시를 사용하는 Spring AOP와 달리 컴파일 단계에서
 
 자세한 설명은 이 글을 추천한다
 
-[https://nhj12311.tistory.com/470](https://nhj12311.tistory.com/470)
+[https%3A%2F%2Fnhj12311.tistory.com%2F470](https://nhj12311.tistory.com/470)
 
 # Spring AOP 어노테이션 vs XML
 
@@ -62,7 +62,7 @@ AspectJ의 어노테이션을 이용해 어노테이션 방식으로 Spring AOP�
 
 따라서 AspectJ의 aspectjweaver 의존성을 추가해 주어야 한다.
 
-[https://mvnrepository.com/artifact/org.aspectj/aspectjweaver/1.9.19](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver/1.9.19)
+[https%3A%2F%2Fmvnrepository.com%2Fartifact%2Forg.aspectj%2Faspectjweaver%2F1.9.19](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver/1.9.19)
 
 의존성을 추가한다고 해서 AspectJ의 AOP를 사용하는 것은 아니다.
 
@@ -85,7 +85,7 @@ AspectJ의 어노테이션을 이용해 어노테이션 방식으로 Spring AOP�
 
 XML설정과 관련된 자세한 설명은 이 글을 추천한다.
 
-[https://private.tistory.com/43](https://private.tistory.com/43)
+[https%3A%2F%2Fprivate.tistory.com%2F43](https://private.tistory.com/43)
 
 # AOP의 용어들
 

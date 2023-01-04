@@ -84,4 +84,4 @@ ApplicationContext(의 상위 인터페이스인 ResourceLoader)의 getResource�
 
 여기까지가 Spring framework document - core의 1장 내용이다.
 
-[https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
+[https%3A%2F%2Fdocs.spring.io%2Fspring-framework%2Fdocs%2Fcurrent%2Freference%2Fhtml%2Fcore.html%23beans](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)

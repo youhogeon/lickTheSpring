@@ -171,7 +171,7 @@ Spring은 설정 파일을 Bean으로 등록할 때, 설정파일 자체를 등�
 
 Spring은 설정 파일의 바이트코드를 조작해, 반드시 객체 생성은 한번만 이루어짐을 강제로 보장한다.
 
-![Untitled](7%20Singleton%20Pattern/Untitled.png)
+![Untitled](7%20Singleton%20Pattern%2FUntitled.png)
 
 Spring은 @Configuration 이 붙어있는 객체를 설정파일로 간주하고 CGLIB를 이용해 프록시 객체를 생성후 원래 객체 대신 Bean으로 등록한다.
 

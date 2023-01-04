@@ -4,7 +4,7 @@ Spring의 IoC 기능은 org.springframework:spring-context 의존성으로부터
 
 spring-context 가 의존하는 패키지를 보면 아래와 같음
 
-![Untitled](3%20Spring%20Context%20사용해보기/Untitled.png)
+![Untitled](3%20Spring%20Context%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0%2FUntitled.png)
 
 따라서 spring-context만 의존성에 추가하면 spring-core, spring-aop 등을 추가하지 않고 사용 가능하다.
 
@@ -18,7 +18,7 @@ mvn archetype:generate
 
 Maven과 같은 빌드 도구를 사용하지 않으려면 spring-context.jar 파일을 내려받고
 
-javac -cp “spring-context.jar” [xxxx.java](http://xxxx.java) 와 같이 컴파일 해야 한다.
+javac -cp “spring-context.jar” [xxxx.java](http%3A%2F%2Fxxxx.java) 와 같이 컴파일 해야 한다.
 
 뿐만 아니라 spring-context가 의존하는 다른 패키지들을 다 찾아서 내려받고 javac에 명령줄 인자로 함께 넘겨야 한다.
 
@@ -36,7 +36,7 @@ pom.xml 파일의 dependencies 태그 내에 아래 의존성을 추가하면, s
 </dependency>
 ```
 
-![Untitled](3%20Spring%20Context%20사용해보기/Untitled%201.png)
+![Untitled](3%20Spring%20Context%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0%2FUntitled%201.png)
 
 spring-context만 추가하였음에도 불구하고, spring-context가 의존하는 다른 의존성도 함께 추가된다.
 

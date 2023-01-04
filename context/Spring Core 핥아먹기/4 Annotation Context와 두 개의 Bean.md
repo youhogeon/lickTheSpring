@@ -111,7 +111,7 @@ Java의 제너릭 문법을 통해 두 번째 인자로 지정한 타입으로 �
 
 스프링 공식 문서에서는 이 방법을 권장한다.
 
-([https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-client](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-client))
+([https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-client](https%3A%2F%2Fdocs.spring.io%2Fspring-framework%2Fdocs%2Fcurrent%2Freference%2Fhtml%2Fcore.html%23beans-factory-client))
 
 ```java
 SampleRepository sampleRepository = context.getBean("primaryRepository", SampleRepository.class);

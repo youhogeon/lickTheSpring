@@ -171,7 +171,7 @@ public class SampleRepositoryImpl2 implements SampleRepository {
 
 또, 필터를 통해 특정 어노테이션 포함 여부, 정규식, 커스텀 필터 등을 지정해 스캔되도록 설정할 수 있다.
 
-[https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-scanning-filters](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-scanning-filters)
+[https%3A%2F%2Fdocs.spring.io%2Fspring-framework%2Fdocs%2Fcurrent%2Freference%2Fhtml%2Fcore.html%23beans-scanning-filters](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-scanning-filters)
 
 ```java
 @Configuration
@@ -258,7 +258,7 @@ public Application(SampleRepository sampleRepository, @Value("Hello, World!") St
 
 또, @Value 어노테이션은 스프링 표현식(SpEL)을 지원한다.
 
-[https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions)
+[https%3A%2F%2Fdocs.spring.io%2Fspring-framework%2Fdocs%2Fcurrent%2Freference%2Fhtml%2Fcore.html%23expressions](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions)
 
 ```java
 private final SampleRepository sampleRepository;
