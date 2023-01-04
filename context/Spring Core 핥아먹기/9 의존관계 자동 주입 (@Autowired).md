@@ -7,13 +7,13 @@ Spring context에서는 설정 파일을 통해 의존관계를 주입하는 방
 ```java
 package com.sample.spring;
 
-t.annotation.Bean;
-t.annotation.Configuration;
-t.annotation.Primary;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
-ry.SampleRepository;
-ry.SampleRepositoryImpl1;
-ry.SampleRepositoryImpl2;
+import com.sample.spring.repository.SampleRepository;
+import com.sample.spring.repository.SampleRepositoryImpl1;
+import com.sample.spring.repository.SampleRepositoryImpl2;
 
 @Configuration
 public class Config {
@@ -44,7 +44,7 @@ public class Config {
 ```java
 package com.sample.spring;
 
-ry.SampleRepository;
+import com.sample.spring.repository.SampleRepository;
 
 public class Application {
 
@@ -78,9 +78,9 @@ public Application application() {
 ```java
 package com.sample.spring;
 
-factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 
-ry.SampleRepository;
+import com.sample.spring.repository.SampleRepository;
 
 public class Application {
 
@@ -117,9 +117,9 @@ public void 아무렇게나지은메서드명(SampleRepository sampleRepository,
 ```java
 package com.sample.spring;
 
-factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 
-ry.SampleRepository;
+import com.sample.spring.repository.SampleRepository;
 
 public class Application {
 

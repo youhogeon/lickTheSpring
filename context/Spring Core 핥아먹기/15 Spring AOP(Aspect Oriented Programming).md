@@ -91,7 +91,7 @@ XML설정과 관련된 자세한 설명은 이 글을 추천한다.
 
 AOP 자체가 어려운 개념은 아니지만, 개발 시 알아야 할 용어가 많아 어렵게 느껴질 수 있다.
 
-- Aspect : 여러 관심사의 집합. (Advice   Pointcut)
+- Aspect : 여러 관심사의 집합. (Advice + Pointcut)
 - Advice : AOP로 처리할 로직 (비즈니스 로직이 아닌 로직)
 - Join point : Advice가 적용될 수 있는 위치
 - Pointcut : Join point 중 Advice를 적용할 위치(특정 조건을 만족하는 하나 또는 그 이상의 join point들)
@@ -251,9 +251,9 @@ public class ConcurrentOperationExecutor implements Ordered {
         int numAttempts = 0;
         PessimisticLockingFailureException lockFailureException;
         do {
-            numAttempts  ;
+            numAttempts++;
             try {
-d();
+                return pjp.proceed();
             }
             catch(PessimisticLockingFailureException ex) {
                 lockFailureException = ex;
@@ -270,11 +270,11 @@ PessimisticLockingFailureException 이 DEFAULT_MAX_RETRIES 번 발생할 때 까
 package com.sample.spring;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-n.After;
-n.Around;
-n.Aspect;
-n.Before;
-type.Component;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
@@ -283,15 +283,15 @@ public class SampleAspect {
     @Around("within(com.sample.spring..*)")
     public Object aopLogger(ProceedingJoinPoint jointPoint) throws Throwable {
         String signatureStr = jointPoint.getSignature().toShortString();
-        System.out.println("before "   signatureStr);
+        System.out.println("before " + signatureStr);
 
         long beginTime = System.nanoTime();
         
         try {
             return jointPoint.proceed();
         } finally {
-            System.out.println("after "   signatureStr);
-            System.out.println(signatureStr   " : "   (System.nanoTime() - beginTime)   "ns");
+            System.out.println("after " + signatureStr);
+            System.out.println(signatureStr + " : " + (System.nanoTime() - beginTime) + "ns");
         }
     }
 

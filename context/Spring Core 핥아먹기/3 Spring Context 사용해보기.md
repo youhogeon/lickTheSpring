@@ -4,7 +4,7 @@ Spring의 IoC 기능은 org.springframework:spring-context 의존성으로부터
 
 spring-context 가 의존하는 패키지를 보면 아래와 같음
 
-![Untitled](3 Spring Context 사용해보기/Untitled.png)
+![Untitled](3 Spring Context 사용해보기/Untitled.png)
 
 따라서 spring-context만 의존성에 추가하면 spring-core, spring-aop 등을 추가하지 않고 사용 가능하다.
 
@@ -36,7 +36,7 @@ pom.xml 파일의 dependencies 태그 내에 아래 의존성을 추가하면, s
 </dependency>
 ```
 
-![Untitled](3 Spring Context 사용해보기/Untitled 1.png)
+![Untitled](3 Spring Context 사용해보기/Untitled 1.png)
 
 spring-context만 추가하였음에도 불구하고, spring-context가 의존하는 다른 의존성도 함께 추가된다.
 
@@ -57,8 +57,8 @@ public class Main {
 ```java
 package com.sample.spring;
 
-ry.SampleRepository;
-ry.SampleRepositoryImpl1;
+import com.sample.spring.repository.SampleRepository;
+import com.sample.spring.repository.SampleRepositoryImpl1;
 
 public class Application {
     
@@ -72,7 +72,7 @@ public class Application {
 ```
 
 ```java
-ory;
+package com.sample.spring.repository;
 
 public class SampleRepositoryImpl1 {
 
@@ -92,8 +92,8 @@ Application은 SampleRepositoryImpl1에 강하게 의존한다.
 ```java
 package com.sample.spring;
 
-ry.SampleRepository;
-ry.SampleRepositoryImpl1;
+import com.sample.spring.repository.SampleRepository;
+import com.sample.spring.repository.SampleRepositoryImpl1;
 
 public class Application {
     
@@ -107,7 +107,7 @@ public class Application {
 ```
 
 ```java
-ory;
+package com.sample.spring.repository;
 
 public interface SampleRepository {
     
@@ -117,7 +117,7 @@ public interface SampleRepository {
 ```
 
 ```java
-ory;
+package com.sample.spring.repository;
 
 public class SampleRepositoryImpl1 implements SampleRepository {
 
@@ -129,7 +129,7 @@ public class SampleRepositoryImpl1 implements SampleRepository {
 ```
 
 ```java
-ory;
+package com.sample.spring.repository;
 
 public class SampleRepositoryImpl2 implements SampleRepository {
 
@@ -149,7 +149,7 @@ Application은 SampleRepositoryImpl1로부터 자유로운가?
 ```java
 package com.sample.spring;
 
-ry.SampleRepository;
+import com.sample.spring.repository.SampleRepository;
 
 public class Application {
 
@@ -163,8 +163,8 @@ public class Application {
 ```java
 package com.sample.spring;
 
-ry.SampleRepository;
-ry.SampleRepositoryImpl1;
+import com.sample.spring.repository.SampleRepository;
+import com.sample.spring.repository.SampleRepositoryImpl1;
 
 public class Main {
 
@@ -194,8 +194,8 @@ Spring Context의 ApplicationContext를 사용하면 빈을 등록하고 받아�
 ```java
 package com.sample.spring;
 
-t.ApplicationContext;
-t.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
@@ -211,9 +211,9 @@ public class Main {
 ```java
 package com.sample.spring;
 
-t.ApplicationContext;
+import org.springframework.context.ApplicationContext;
 
-ry.SampleRepository;
+import com.sample.spring.repository.SampleRepository;
 
 public class Application {
 

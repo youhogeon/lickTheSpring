@@ -23,4 +23,4 @@ public void run() {
 
 강제 사항이 아니기 때문에 컴파일/실행이 잘 되지만, (지원하는) IDE에서 경고를 띄워준다.
 
-![Untitled](13 Null Sdaa9f/Untitled.png)
+![Untitled](13 Null Safety/Untitled.png)
