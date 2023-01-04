@@ -4,7 +4,7 @@ Spring의 IoC 기능은 org.springframework:spring-context 의존성으로부터
 
 spring-context 가 의존하는 패키지를 보면 아래와 같음
 
-![Untitled](3%20Spring%20Context%20사용해보기/Untitled.png)
+![Untitled](3%20Spring%20Context%20사용해보기/Untitled.png)
 
 따라서 spring-context만 의존성에 추가하면 spring-core, spring-aop 등을 추가하지 않고 사용 가능하다.
 
@@ -36,7 +36,7 @@ pom.xml 파일의 dependencies 태그 내에 아래 의존성을 추가하면, s
 </dependency>
 ```
 
-![Untitled](3%20Spring%20Context%20사용해보기/Untitled%201.png)
+![Untitled](3%20Spring%20Context%20사용해보기/Untitled%201.png)
 
 spring-context만 추가하였음에도 불구하고, spring-context가 의존하는 다른 의존성도 함께 추가된다.
 
