@@ -24,7 +24,7 @@ public class JdbcMemberRepositoryTest {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "test", "test");
         connection.setAutoCommit(false);
 
-        memberRepository = new JdbcMemberRepository(connection);
+        //memberRepository = new JdbcMemberRepository(connection);
     }
 
     @AfterEach

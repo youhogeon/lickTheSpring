@@ -8,17 +8,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class JdbcMemberRepository implements MemberRepository{
 
-    private final Connection connection;
+    private final DataSource datasource;
 
-    public JdbcMemberRepository(Connection connection) {
-        this.connection = connection;
+    public JdbcMemberRepository(DataSource datasource) {
+        this.datasource = datasource;
     }
 
     @Override
     public String findNameById(Long id) {
         try {
+            Connection connection = datasource.getConnection();
             PreparedStatement pstmt = connection.prepareStatement("SELECT * from `members` WHERE id = ?");
             pstmt.setLong(1, id);
 
@@ -42,6 +48,7 @@ public class JdbcMemberRepository implements MemberRepository{
         List<String> names = new ArrayList<>();
 
         try {
+            Connection connection = datasource.getConnection();
             PreparedStatement pstmt = connection.prepareStatement("SELECT * from `members`");
             ResultSet rs = pstmt.executeQuery();
 
@@ -61,6 +68,7 @@ public class JdbcMemberRepository implements MemberRepository{
     @Override
     public Long save(String name) {
         try {
+            Connection connection = datasource.getConnection();
             PreparedStatement pstmt = connection.prepareStatement("INSERT INTO `members` (`name`) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
             pstmt.setString(1, name);
 
@@ -86,6 +94,7 @@ public class JdbcMemberRepository implements MemberRepository{
         int changedRow = 0;
 
         try {
+            Connection connection = datasource.getConnection();
             PreparedStatement pstmt = connection.prepareStatement("UPDATE `members` SET `name` = ? WHERE `id` = ?");
             pstmt.setString(1, name);
             pstmt.setLong(2, id);
@@ -105,6 +114,7 @@ public class JdbcMemberRepository implements MemberRepository{
         int changedRow = 0;
 
         try {
+            Connection connection = datasource.getConnection();
             PreparedStatement pstmt = connection.prepareStatement("DELETE FROM `members` WHERE `id` = ?");
             pstmt.setLong(1, id);
 
